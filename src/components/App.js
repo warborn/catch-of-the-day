@@ -36,6 +36,7 @@ class App extends Component {
   }
 
   render() {
+    const { fishes, order } = this.state; 
     return (
       <div className="catch-of-the-day">
         <div className="menu">
@@ -44,16 +45,16 @@ class App extends Component {
           <ul className="list-of-fishes">
             {
               Object
-                .keys(this.state.fishes)
+                .keys(fishes)
                 .map(key => <Fish 
                   key={key} 
                   index={key} 
-                  details={this.state.fishes[key]} 
+                  details={fishes[key]} 
                   addToOrder={this.addToOrder} />)
             }
           </ul>
         </div>
-        <Order />
+        <Order fishes={fishes} order={order} />
         <Inventory 
           addFish={this.addFish} 
           loadSamples={this.loadSamples} />
