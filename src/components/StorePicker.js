@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { getFunName } from '../helpers';
 
 class StorePicker extends Component {
   goToStore = (event) => {
     event.preventDefault();
     const storeId = this.storeInput.value;
-    this.context.router.transitionTo(`/store/${storeId}`);
+    this.props.history.push(`/store/${storeId}`);
   }
 
   render() {
@@ -21,10 +20,6 @@ class StorePicker extends Component {
       </form>
     );
   }
-}
-
-StorePicker.contextTypes = {
-  router: PropTypes.object
 }
 
 export default StorePicker;
