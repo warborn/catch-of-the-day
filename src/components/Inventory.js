@@ -70,7 +70,7 @@ class Inventory extends Component {
         <input type="text" name="name" value={fish.name} onChange={(e) => this.handleChange(e, key)} placeholder="Fish name"/>
         <input type="text" name="price" value={fish.price} onChange={(e) => this.handleChange(e, key)} placeholder="Fish price"/>
         <select name="status" value={fish.status} onChange={(e) => this.handleChange(e, key)}>
-          <option value="avalilable">Fresh!</option>
+          <option value="available">Fresh!</option>
           <option value="unavailable">Sold Out!</option>
         </select>
         <textarea type="text" name="desc" value={fish.desc} onChange={(e) => this.handleChange(e, key)} placeholder="Fish desc"></textarea>

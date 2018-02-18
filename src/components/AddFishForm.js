@@ -22,7 +22,7 @@ class AddFishForm extends Component {
         <input ref={(input) => this.name = input} type="text" placeholder="Fish Name" />
         <input ref={(input) => this.price = input} type="text" placeholder="Fish Price" />
         <select ref={(input) => this.status = input}>
-          <option value="avalilable">Fresh!</option>
+          <option value="available">Fresh!</option>
           <option value="unavailable">Sold Out!</option>
         </select>
         <textarea ref={(input) => this.desc = input} placeholder="Fish Desc"></textarea>
